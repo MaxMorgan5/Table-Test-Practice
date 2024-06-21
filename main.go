@@ -3,6 +3,7 @@ package main
 import (
 	"errors"
 	"fmt"
+	"log"
 	"strings"
 )
 
@@ -12,7 +13,7 @@ func main() {
 
 	result, err := SepStrings(s, sep)
 	if err != nil {
-		return
+		log.Fatal(err)
 	}
 
 	for _, val := range result {
